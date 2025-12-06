@@ -1,0 +1,29 @@
+[
+  {
+    "customer_id": "C0001",
+    "first_name": "Alice",
+    "last_name": "Johnson",
+    "email": "alice.johnson@example.com",
+    "country": "US",
+    "state": "CA",
+    "signup_date": "2024-02-13"
+  },
+  {
+    "customer_id": "C0002",
+    "first_name": "Brian",
+    "last_name": "Smith",
+    "email": "brian.smith@example.com",
+    "country": "US",
+    "state": "NY",
+    "signup_date": "2024-03-05"
+  },
+  {
+    "customer_id": "C0003",
+    "first_name": "Emma",
+    "last_name": "Green",
+    "email": "emma.green@example.com",
+    "country": "US",
+    "state": "TX",
+    "signup_date": "2024-03-21"
+  }
+]
