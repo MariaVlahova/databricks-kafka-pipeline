@@ -69,6 +69,17 @@ def run_once(spark, dbutils):
         config.SALES_SILVER_TABLE,
     )
 
+    # 6) Run Gold metrics
+    run_gold_batch(
+        spark,
+        config.CUSTOMER_SILVER_TABLE,
+        config.ORDER_SILVER_TABLE,
+        config.SALES_SILVER_TABLE,
+        config.ORDER_METRICS_GOLD_TABLE,
+        config.SALES_METRICS_GOLD_TABLE,
+        config.COMBINED_METRICS_GOLD_TABLE,
+    )
+
     print("=== PIPELINE: DONE ===")
 
 
