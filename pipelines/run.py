@@ -55,6 +55,20 @@ def run_once(spark, dbutils):
     run_bronze_ingest(order_stream,    config.ORDER_CHECKPOINT,    config.ORDER_BRONZE_PATH)
     run_bronze_ingest(sales_stream,    config.SALES_CHECKPOINT,    config.SALES_BRONZE_PATH)
 
+    # 5) Run Silver batch
+    run_silver_batch(
+        spark,
+        config.CUSTOMER_BRONZE_PATH,
+        config.ORDER_BRONZE_PATH,
+        config.SALES_BRONZE_PATH,
+        config.CUSTOMER_SCHEMA_TABLE,
+        config.ORDER_SCHEMA_TABLE,
+        config.SALES_SCHEMA_TABLE,
+        config.CUSTOMER_SILVER_TABLE,
+        config.ORDER_SILVER_TABLE,
+        config.SALES_SILVER_TABLE,
+    )
+
     print("=== PIPELINE: DONE ===")
 
 
